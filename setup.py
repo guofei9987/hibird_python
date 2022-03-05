@@ -10,9 +10,9 @@ print("installing my_build, it is an example for python extension!")
 # 完全开源
 setup(
     name='my_build',
-    version='0.0.2',  # 版本号，每次上传的版本号应当不一样，可以用类似 sko.__version__ 去自动指定
+    version='0.0.4',  # 版本号，每次上传的版本号应当不一样，可以用类似 sko.__version__ 去自动指定
     python_requires='>=3.5',
-    packages=['my_build', 'my_build.sub', 'my_build.core'],  # 这里不加入 my_build.core
+    packages=['my_build', 'my_build.sub', 'my_build.core', 'my_build.core_private'],
     ext_modules=[
         # c文件会编译为 .so 文件
         Extension(
@@ -25,7 +25,7 @@ setup(
 
     # ext_modules=cythonize('my_build/hello.py')
 
-    package_data={'my_build': ['data/*.txt']},
+    package_data={'my_build': ['data/*.txt', 'core_private/*.so']},
     # data_files=[('my_build', ['my_build/data/*.txt'])]
 
 )

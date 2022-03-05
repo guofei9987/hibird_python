@@ -1,7 +1,7 @@
 import os
 import ctypes
 
-# from . import CoreClass  # import python .so
+from . import CoreClass  # import python .so
 
 core_path = os.path.dirname(__file__)
 

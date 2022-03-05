@@ -9,14 +9,20 @@ hello2.hello2()
 print("read_file res:")
 hello2.my_file()
 
-# %%
-# tst-so
+# %% 测试公开 c 文件编译（先生成so文件，然后运行此段代码）
 
 from my_build import core
 
 c_res = core.CoreFunction.my_func(1, 3)
 print('c_res', c_res)
 
-core_class = core.CoreClass.MyClass()
+
+#%% 测试加密 c和python 文件编译（也是先生成，然后运行此段代码）
+from my_build import core_private
+
+c_res = core_private.CoreFunction.my_func(1, 3)
+print('private c_res', c_res)
+
+core_class = core_private.CoreClass.MyClass()
 py_res = core_class.my_add(1, 2)
-print('py_res=', py_res)
+print('private py_res=', py_res)
