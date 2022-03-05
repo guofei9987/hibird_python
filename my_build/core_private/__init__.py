@@ -1,7 +1,7 @@
 import os
 import ctypes
 
-from . import CoreClass  # import python .so
+# from . import CoreClass  # import python .so
 
 core_path = os.path.dirname(__file__)
 
@@ -12,6 +12,8 @@ for file in core_files:
     if file.endswith('.so'):
         prefix = file.split('.')[0]
         so_files[prefix] = file
+
+
 
 # read C so
 CoreFunction = ctypes.cdll.LoadLibrary(os.path.join(
