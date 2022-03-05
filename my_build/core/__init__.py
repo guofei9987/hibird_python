@@ -3,10 +3,9 @@ import ctypes
 
 core_path = os.path.dirname(__file__)
 
-core_files = os.listdir(core_path)
 
 so_files = {file.split('.')[0]: os.path.join(core_path, file)
-            for file in core_files
+            for file in os.listdir(core_path)
             if file.endswith('.so')}
 
 # read .so
