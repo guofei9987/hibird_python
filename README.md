@@ -7,4 +7,4 @@
 3. Python/C 编译为 `.so`，然后作为包的一部分。达到代码加密的效果
 4. 把数据文件一起打包
 
-更详细的文档 ：https://www.guofei.site/2019/10/05/make_module.html
+更详细的文档 ：https://www.guofei.site/2021/09/12/hybrid.html
