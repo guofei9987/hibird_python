@@ -24,7 +24,7 @@ setup(
     ],
 
     # ext_modules=cythonize('my_build/hello.py')
-
+    # 这里把 txt 文件和 so 文件都作为“数据文件”，在 pip install 时候安装
     package_data={'my_build': ['data/*.txt', 'core_private/*.so']},
     # data_files=[('my_build', ['my_build/data/*.txt'])]
 
