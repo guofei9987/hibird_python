@@ -18,9 +18,9 @@ setup(
         Extension(
             # 1)必须指定my_build，否则 so 文件直接生成到包的根目录下。
             # 2）my_add 是生成的so文件名，会自动添加后缀使其符合规范
-            "my_build.core.CoreFunction",
+            name="my_build.core.CoreFunction",
             # 被编译的 c 文件
-            ['my_build/core/CoreFunction.c'])
+            sources=['my_build/core/CoreFunction.c'])
     ],
 
     # ext_modules=cythonize('my_build/hello.py')

@@ -27,5 +27,9 @@ pip install .
 2. 在 `setup.py` 中，把所有的  `*.c` 文件都列进去，但不要列 `*.h` 文件
  
 
+如果有 `.h` 文件，如何打包？
+- 建立文件 `MANIFEST.in`，然后填入文本例如 `include fuzzy_hash/lib/*.h`。打包时就把对应的 `.h` 文件打包进去了
+- 【实测不成功】 `Extension(include_dirs=****)` 可以指定头文件所在的目录
+
 
 更详细的文档 ：https://www.guofei.site/2021/09/12/hybrid.html
