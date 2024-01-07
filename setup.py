@@ -3,7 +3,7 @@ from setuptools import find_packages
 
 # from distutils.core import setup
 from distutils.extension import Extension
-from Cython.Build import cythonize
+# from Cython.Build import cythonize
 
 print("installing my_build, it is an example for python extension!")
 

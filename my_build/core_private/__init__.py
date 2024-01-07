@@ -1,10 +1,10 @@
 import os
 import ctypes
 
-# python 生成的 .so 文件，这样引入：
-from . import CoreClass  # import python .so
+# 1、 python 生成的 .so 文件，直接 import 就行：
+from . import CoreClass
 
-# C生成的 .so 文件，这样引入
+# 2、 C生成的 .so 文件，这样引入：
 core_path = os.path.dirname(__file__)
 
 so_files = {file.split('.')[0]: os.path.join(core_path, file)
